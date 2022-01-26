@@ -131,10 +131,15 @@ static Action OnPlayerSpawn(Event event, const char[] name,
     return Plugin_Continue;
   }
 
-  SetEntProp(userid, Prop_Data, kTakeDamagePropertyName, kTakeDamageNoDamage,
+  int client = GetClientOfUserId(userid);
+  if (!client) {
+    return Plugin_Stop;
+  }
+
+  SetEntProp(client, Prop_Data, kTakeDamagePropertyName, kTakeDamageNoDamage,
              1);
-  SetEntData(userid, g_render_mode_offset, kRenderModeTransparent, 1);
-  SetEntDataArray(userid, g_color_offset, kColorTransparent, 4, 1);
+  SetEntData(client, g_render_mode_offset, kRenderModeTransparent, 1);
+  SetEntDataArray(client, g_color_offset, kColorTransparent, 4, 1);
 
   Grant(userid, spawn_protection);
 
