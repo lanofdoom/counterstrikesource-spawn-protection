@@ -164,7 +164,7 @@ public void OnMapEnd() {
   g_spawn_protection_timers.Clear();
 }
 
-public void PluginInitialize() {
+public void OnPluginStart() {
   g_spawn_protection_time_cvar =
       CreateConVar("sm_lanofdoom_spawn_protection_time", "4.0",
                    "Controls how the player is protected from damage after " ...
