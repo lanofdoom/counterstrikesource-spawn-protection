@@ -50,7 +50,7 @@ static Action TimerElapsed(Handle timer, any userid) {
     return Plugin_Stop;
   }
 
-  if (IsClientInGame(userid) && IsPlayerAlive(client)) {
+  if (IsClientInGame(client) && IsPlayerAlive(client)) {
     SetEntProp(client, Prop_Data, kTakeDamagePropertyName,
                kTakeDamageNormalDamage, 1);
     SetEntData(client, g_render_mode_offset, kRenderModeNormal, 1);
