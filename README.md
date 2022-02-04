@@ -1,6 +1,5 @@
 # LAN of DOOM Spawn Protection
-A SourceMod plugin that grants limited invulnerability after spawn in CS:S and
-CS:GO.
+A SourceMod plugin that grants limited invulnerability after spawn in CS:S.
 
 # Building
 Check out the repository and run the ``./build.sh`` script.
