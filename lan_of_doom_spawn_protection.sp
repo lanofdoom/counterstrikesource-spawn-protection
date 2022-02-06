@@ -99,6 +99,8 @@ static void Invalidate(int userid) {
   }
 
   KillTimer(old_timer);
+
+  g_spawn_protection_timers.Set(userid, INVALID_HANDLE);
 }
 
 //
