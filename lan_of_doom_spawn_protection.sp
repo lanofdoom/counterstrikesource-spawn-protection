@@ -3,7 +3,7 @@
 public const Plugin myinfo = {
     name = "Spawn Protection", author = "LAN of DOOM",
     description = "Enables limited invulnerability after player spawn",
-    version = "1.0.1",
+    version = "1.0.0",
     url = "https://github.com/lanofdoom/counterstrikesource-spawn-protection"};
 
 static const char kPlayerClassname[] = "CCSPlayer";
